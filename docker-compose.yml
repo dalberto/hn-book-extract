@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        - APP_DIR=/opt/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ".:/opt/app"
